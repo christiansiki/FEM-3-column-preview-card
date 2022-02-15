@@ -1,0 +1,46 @@
+/* ----------------------- */
+/*     Custom Properties   */
+/* ----------------------- */
+:root {
+    /* colors */
+    --clr-orange: 31 77% 52%;
+    --clr-cyan: 184 100% 22%;
+    --clr-dark-cyan: 179 100% 13%;
+    --clr-white: 0 0% 100% 0.75;
+    --clr-gray: 0 0% 95%;
+
+    /* font-sizes */
+    --fs-paragraph: 0.9375rem;
+
+    /* font-families */
+    --ff-sans-serif: 'Lexend Deca', sans-serif;
+    --ff-cursive: 'Big Shoulders Display', cursive;
+}
+
+/* Laptop screen */
+    @media (min-width: 45em) {
+        :root {
+            /* font-sizes */
+            --fs-paragraph: 1.125rem;
+        }
+    }
+
+/* Box sizing */
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+picture {
+  margin: 0;
+}
+
