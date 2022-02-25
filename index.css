@@ -6,7 +6,7 @@
     --clr-orange: 31 77% 52%;
     --clr-cyan: 184 100% 22%;
     --clr-dark-cyan: 179 100% 13%;
-    --clr-white: 0 0% 100% 0.75;
+    --clr-white: 0 0% 100%;
     --clr-gray: 0 0% 95%;
 
     /* font-sizes */
@@ -44,3 +44,89 @@ picture {
   margin: 0;
 }
 
+/* Set up body */
+body {
+    display: grid;
+    color: hsl(var(--clr-white) / 0.75);
+    background-color: hsl(var(--clr-gray));
+    font-family: var(--ff-sans-serif);
+    font-size: var(--fs-paragraph);
+    line-height: 1.5;
+    min-height: 100vh;
+
+}
+
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make forms elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* ----------------------- */
+/*     Utility Classes     */
+/* ----------------------- */
+
+/* general */
+.flex {
+    display: flex;
+    gap: var(--gap), 1rem;
+}
+
+.grid{
+    display: grid;
+    gap: var(--gap), 1rem;
+}
+
+.container {
+  /* logical property that looks at inline access (left/right) */
+  padding-inline: 2em;
+  margin-block: 4em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+/* colors */
+
+.bg-orange {
+    background-color: hsl(var(--clr-orange));
+}
+.bg-cyan {
+    background-color: hsl(var(--clr-cyan));
+}
+.bg-dark-cyan {
+    background-color: hsl(var(--clr-dark-cyan));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
+
+/* typography */
+
+.ff-sans-serif {
+    font-family: var(--ff-sans-serif);
+}
+.ff-cursive {
+    font-family: var(--ff-cursive);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* components */
+
+.card-grid {
+    display: grid;
+    grid-auto-columns: 1fr;
+
+}
