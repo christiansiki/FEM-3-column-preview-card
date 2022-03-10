@@ -53,7 +53,14 @@ body {
     font-size: var(--fs-paragraph);
     line-height: 1.5;
     min-height: 100vh;
+}
 
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    margin-bottom: 4rem;
 }
 
 /* make images easier to work with */
@@ -141,9 +148,16 @@ select {
 /* components */
 
 .card {
-    padding-block: 2rem;
-    padding-inline: 3rem;
-    padding-bottom: 5em;
+    padding: 2em 3em 7em 3em;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card--top {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card--bottom {
+    border-radius: 0 0 1rem 1rem;
 }
 
 .card-grid {
@@ -154,9 +168,31 @@ select {
     margin-inline: auto;
 }
 
+
 .btn {
     padding: 0.75rem 1.5rem;
     background-color: hsl(var(--clr-white));
     border-radius: 100px;
     text-decoration: none;
+}
+
+.btn:hover, 
+.btn:focus {
+    border: 1px solid hsl(var(--clr-white));
+    background-color: hsl(var(--clr-white) / 0);
+    color: hsl(var(--clr-white));
+}
+
+.attribution {
+    padding-inline: 5rem;
+    color: black;
+}
+
+.attribution__links {
+    text-decoration: none;
+}
+
+.attribution__links:hover, 
+.attribution__links:focus {
+    opacity: .5;
 }
