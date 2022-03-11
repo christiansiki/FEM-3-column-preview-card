@@ -60,7 +60,14 @@ h2 {
 }
 
 p {
+    max-width: 25ch;
     margin-bottom: 4rem;
+}
+
+@media (min-width: 45em) {
+    p {
+        margin-bottom: 7rem;
+    }
 }
 
 /* make images easier to work with */
@@ -149,7 +156,7 @@ select {
 
 .card {
     padding: 2em 3em 7em 3em;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 .card--top {
@@ -163,13 +170,29 @@ select {
 .card-grid {
     display: grid;
     grid-auto-columns: 1fr;
+    grid-template-areas: 
+        'one'
+        'two'
+        'three';
     padding-block: 2rem;
     width: min(95%, 70rem);
     margin-inline: auto;
 }
 
+.card:nth-child(1) {
+    grid-area: one;
+}
+
+.card:nth-child(2) {
+    grid-area: two;
+}
+
+.card:nth-child(3) {
+    grid-area: three;
+}
 
 .btn {
+    width: 100%;
     padding: 0.75rem 1.5rem;
     background-color: hsl(var(--clr-white));
     border-radius: 100px;
@@ -188,6 +211,12 @@ select {
     color: black;
 }
 
+.attribution > * {
+    width: 100vw;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
 .attribution__links {
     text-decoration: none;
 }
@@ -195,4 +224,22 @@ select {
 .attribution__links:hover, 
 .attribution__links:focus {
     opacity: .5;
+}
+
+/* For laptop screens */
+
+@media (min-width: 55em) {
+    .card-grid {
+        grid-template-areas: 
+            'one two three';
+    }
+
+    .card--top {
+        border-radius: 1rem 0 0 1rem ;
+    }
+
+    .card--bottom {
+        border-radius: 0 1rem 1rem 0;
+    }
+
 }
