@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/christiansiki/FEM-3-column-preview-card.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://christiansiki.github.io/FEM-3-column-preview-card/)
 
 ## My process
 
